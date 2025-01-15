@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Mengatur background dan posisi tengah */
+        .bg-container {
+            background: url('BotImage.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* Efek Teks dengan Gradient dan Ukuran Besar */
+        .gradient-text {
+            font-size: 60px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #4ccb17, #ffb700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Menambahkan transparansi pada form */
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navbar tetap di atas */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header dengan Logo (Nama Saja) dan Navbar di sebelah kiri -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">GreenFields</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu Navigasi -->
+             <div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link beranda-link active" href="#">Home</a></li>
+                  <li class="nav-item"><a class="nav-link beranda-link active" href="Belanja.html">Belanja</a></li>
+                  <li class="nav-item"><a class="nav-link beranda-link active" href="About.html">Tentang Kami</a></li>
+                  <li class="nav-item"><a class="nav-link beranda-link active" href="#">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container untuk background dan teks -->
+    <div class="bg-container">
+        <!-- Teks dengan gradient warna -->
+        <h2 class="gradient-text">Selamat Datang</h2>
+
+        <!-- ALERT (Awalnya Tersembunyi) -->
+        <div id="alertBox" class="alert" style="display:none;"></div>
+
+        <!-- Form di tengah -->
+        <form style="height:fit-content; width:fit-content;" class="form-container" id="loginForm">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" name="remember">
+                <label class="form-check-label"> Remember me </label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+    </div>
+    <footer class="bg-dark text-center py-4" style="color: white">
+      <div class="container">
+        <p class="mb-1">Follow Us</p>
+        <a href="#" class="text-decoration-none me-3">Facebook</a>
+        <a href="#" class="text-decoration-none me-3">Twitter</a>
+        <a href="#" class="text-decoration-none">Instagram</a>
+        <p class="mt-3 mb-0">&copy;Haidir AHmad Gumelar</p>
+      </div>
+    </footer></body>
+</html>
