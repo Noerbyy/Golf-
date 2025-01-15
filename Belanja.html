@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .bg-container {
+            background: url('BotImage.jpg') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #4ccb17, #ffb700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link {
+    color: #4ccb17;
+}
+
+/* Warna saat hover */
+.nav-link:hover {
+    color: #ffffcc; /* Putih menyala */
+}
+
+/* Warna saat aktif (diklik) */
+.nav-link.active {
+    color: #4ccb17 !important; /* Hijau */
+}
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 18rem;
+        }
+
+        .search-bar {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold gradient-text" href="#">GreenFields</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+          
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="Bootsrap.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Belanja.html">Belanja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="bg-container">
+        <div class="card-container" id="cardContainer">
+            <div class="card" data-name="bola golf">
+                <img src="Bola.jpg" class="card-img-top" alt="Bola Golf">
+                <div class="card-body">
+                    <h5 class="card-title">Bola Golf</h5>
+                    <p class="card-text">Bola golf berkualitas tinggi untuk turnamen.</p>
+                    <a href="#" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="tongkat golf">
+                <img src="Golf.jpg" class="card-img-top" alt="Tongkat Golf">
+                <div class="card-body">
+                    <h5 class="card-title">Tongkat Golf</h5>
+                    <p class="card-text">Tongkat golf dengan presisi tinggi.</p>
+                    <a href="#" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="topi golf">
+                <img src="topi.jpg" class="card-img-top" alt="Topi Golf">
+                <div class="card-body">
+                    <h5 class="card-title">Topi Golf</h5>
+                    <p class="card-text">Topi nyaman untuk bermain golf.</p>
+                    <a href="#" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function () {
+            let filter = this.value.toLowerCase();
+            let cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                let itemName = card.getAttribute('data-name').toLowerCase();
+                if (itemName.includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

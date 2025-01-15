@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .bg-container {
+            background: url('BotImage.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .content-box {
+            background: rgba(190, 189, 189, 0.5); /* Warna hitam dengan transparansi */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+        }
+        </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold gradient-text" href="#">GreenFields</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="Bootsrap.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="Belanja.html">Belanja</a></li>
+                <li class="nav-item"><a class="nav-link" href="About.html">Tentang Kami</a></li>
+                <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="bg-container">
+    <div class="content-box">
+        <h1 class="gradient-text">Selamat Datang di GreenFields</h1>
+        <p><b>
+            GreenFields adalah platform yang menyediakan berbagai produk organik dan ramah lingkungan. 
+            Kami berkomitmen untuk mendukung gaya hidup sehat dengan menyediakan produk berkualitas tinggi yang 
+            berasal langsung dari petani lokal.
+        </b></p>
+    </div>
+</div>
+</body>
+</html>
