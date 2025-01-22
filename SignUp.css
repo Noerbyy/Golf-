@@ -1,0 +1,45 @@
+.bg-container {
+    background: url('BotImage.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.form-container {
+    background: rgb(236, 233, 179);
+    padding: 75px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #4ccb17, #ffb700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+        /* Warna default navigasi */
+        .nav-link {
+            color: #4ccb17;
+        }
+
+        /* Warna saat hover */
+        .nav-link:hover {
+            color: #ffffcc;
+        }
+
+        /* Warna saat aktif */
+        .nav-link.active {
+            color: #4ccb17 !important;
+        }

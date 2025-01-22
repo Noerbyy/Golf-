@@ -1,0 +1,61 @@
+.bg-container {
+    background: url(BotImage.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Navbar tetap di atas */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.gradient-text {
+    background: linear-gradient(45deg, #4ccb17, #ffb700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* Warna default navigasi */
+.nav-link {
+color: #4ccb17;
+}
+
+/* Warna saat hover */
+.nav-link:hover {
+color: #ffffcc; /* Putih menyala */
+}
+
+/* Warna saat aktif (diklik) */
+.nav-link.active {
+color: #4ccb17 !important; /* Hijau */
+}
+.navbar-nav .nav-item {
+    margin-right: 50px;
+    align-content: center;
+}
+
+#cartIcon {
+    font-size: 1rem;
+}
+
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    width: 18rem;
+}
+
