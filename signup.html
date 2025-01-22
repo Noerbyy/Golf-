@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="SignUp.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold gradient-text" href="#">GreenFields</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" style="color: #4ccb17;" href="bootstrap2.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #4ccb17;" href="abousUs.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #4ccb17;" href="Kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form Sign Up -->
+    <div class="bg-container">
+        <div class="form-container">
+            <h2 class="mb-4" style="color: #4ccb17;">Sign Up</h2>
+            <form id="signupForm">
+                <!-- Nama -->
+                <div class="mb-3">
+                    <label for="nama" class="form-label" style="color: #4ccb17;" >Nama Lengkap:</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" required>
+                </div>
+                
+                <!-- Gmail -->
+                <div class="mb-3">
+                    <label for="email" class="form-label" style="color: #4ccb17;">Gmail:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan Gmail" required>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-3">
+                    <label for="password" class="form-label" style="color: #4ccb17;">Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Masukkan Password" required>
+                </div>
+
+                <!-- Tombol Submit -->
+                <button type="submit" class="btn btn-success w-100">Daftar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk Alert -->
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Sign Up Berhasil! Selamat bergabung.');
+            window.location.href = 'bootstrap2.html'; // Arahkan ke halaman Home
+        });
+    </script>
+    </body>
+</html>
